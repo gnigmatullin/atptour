@@ -1,16 +1,39 @@
-# README #
+# atptour
 
-### What is this repository for? ###
+A project for working with ATP Tour tennis data, including scraping, processing and analyzing match or player information.
 
-* ATP Tour results archive parser
+## 🎾 Features
 
-* Parse tennis matches results from archive, collect in DB, export
+* Fetch ATP Tour data
+* Parse player and match information
+* Data processing and transformation
+* Ready for further analytics or integration
 
-* Version 1.0
+## 🛠 Tech Stack
 
-### How do I get set up? ###
+* PHP
 
-* Configuration:
-    * PHP 7.0 or higher
-    * MySQL 5.6 or higher
-    * cURL
+## 📦 Installation
+
+```bash
+git clone https://github.com/gnigmatullin/atptour.git
+cd atptour
+```
+
+## ▶️ Usage
+
+```bash
+# run in a single thread
+php run_results.php
+# run multi threads mode
+php run_results_multi.php
+```
+
+## 📊 Possible Improvements
+
+* Build API layer
+* Add UI for data visualization
+
+## 👨‍💻 Author
+
+GitHub: https://github.com/gnigmatullin
