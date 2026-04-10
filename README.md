@@ -11,7 +11,9 @@ A project for working with ATP Tour tennis data, including scraping, processing 
 
 ## 🛠 Tech Stack
 
-* PHP
+* PHP 7.0 or higher
+* MySQL 5.6 or higher
+* cURL
 
 ## 📦 Installation
 
