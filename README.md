@@ -1,41 +1,58 @@
 # atptour
 
-A project for working with ATP Tour tennis data, including scraping, processing and analyzing match or player information.
+A PHP scraper for collecting historical match results and player data from the ATP Tour website. Supports both single-threaded and multi-threaded execution for faster data collection.
 
-## 🎾 Features
+## Overview
 
-* Fetch ATP Tour data
-* Parse player and match information
-* Data processing and transformation
-* Ready for further analytics or integration
+Parses the ATP Tour results archive and stores structured match and player data in a MySQL database. Designed for sports data analysis, betting research, or building historical datasets.
 
-## 🛠 Tech Stack
+**Collected data includes:** match results, player rankings, tournament info, scores by set.
 
-* PHP 7.0 or higher
-* MySQL 5.6 or higher
-* cURL
+## Stack
 
-## 📦 Installation
+`PHP 7.0+` `MySQL` `cURL`
+
+## Structure
+
+```
+atptour/
+├── ScraperClass.php        # Core scraping logic
+├── ResultsScraper.php      # Results parsing
+├── run_results.php         # Single-thread runner
+├── run_results_multi.php   # Multi-thread runner
+├── export_players.php      # Player data export
+├── export_results.php      # Results export
+└── db.php                  # Database connection
+```
+
+## Installation
 
 ```bash
 git clone https://github.com/gnigmatullin/atptour.git
 cd atptour
 ```
 
-## ▶️ Usage
+Configure your database connection in `db.php`, then run:
 
 ```bash
-# run in a single thread
+# Single-threaded
 php run_results.php
-# run multi threads mode
+
+# Multi-threaded (faster for large date ranges)
 php run_results_multi.php
 ```
 
-## 📊 Possible Improvements
+Export collected data:
 
-* Build API layer
-* Add UI for data visualization
+```bash
+php export_players.php
+php export_results.php
+```
 
-## 👨‍💻 Author
+## Related projects
 
-GitHub: https://github.com/gnigmatullin
+For sports data processing at scale — including AI-based team name matching across 100K+ aliases using Claude API — see my [Upwork portfolio](https://www.upwork.com/freelancers/gazizn).
+
+---
+
+[LinkedIn](https://www.linkedin.com/in/gaziz-nigmatullin/) · [Upwork](https://www.upwork.com/freelancers/gazizn)
